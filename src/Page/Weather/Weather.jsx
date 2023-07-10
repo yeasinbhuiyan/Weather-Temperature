@@ -11,7 +11,7 @@ const Weather = () => {
     const [sortOrder, setSortOrder] = useState('asc');
 
     useEffect(() => {
-        fetch(`http://api.weatherapi.com/v1/forecast.json?key=56a94bcd21be43668e0110744231007 &q=${searchValue}&days=7&aqi=no&alerts=no`)
+        fetch(`https://api.weatherapi.com/v1/forecast.json?key=56a94bcd21be43668e0110744231007&q=${searchValue}&days=7&aqi=no&alerts=no`)
             .then(res => res.json())
             .then(data => setWeather(data))
 
