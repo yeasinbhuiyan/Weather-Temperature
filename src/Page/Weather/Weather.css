@@ -13,13 +13,16 @@
     background-repeat: no-repeat;
     /* linear-gradient:(to bottom, rgba(13, 15, 26, 0.389), rgba(0, 0, 0, 0.73)) */
 }
+.text-small{
+    font-size: 10px;
+}
 .ok{
 margin-top: 5%
 
 }
 @media screen and (max-width: 640px) {
    .ok{
-    margin-top: 40%;
+    margin-top: 7%;
    }
   }
 
