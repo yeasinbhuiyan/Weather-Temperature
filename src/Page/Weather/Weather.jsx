@@ -68,7 +68,6 @@ const Weather = () => {
 
 
 
-                    {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mx-auto"> */}
                     {
                         weather?.location && <div className='mx-auto text-center pt-5'>
 
@@ -82,8 +81,8 @@ const Weather = () => {
                         </div>
                     }
 
+
                     <div className='text-center py-5'>
-                        {/* <button className='btn btn-xs'>Week Highest Tempature</button> */}
                         <button onClick={handleSort} className='btn btn-xs'> {sortOrder === 'asc' ? 'Lowest temperature in Week' : 'highest temperature in Week'}</button>
                     </div>
 
@@ -95,14 +94,6 @@ const Weather = () => {
                             )
                         }
                     </div>
-
-
-
-
-
-
-
-
 
 
 
