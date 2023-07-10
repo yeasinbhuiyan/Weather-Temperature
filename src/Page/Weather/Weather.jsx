@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import './Weather.css'
 import { useEffect } from 'react';
+import ForecastCard from '../../Components/ForecastCard/ForecastCard';
+import moment from 'moment';
+
 const Weather = () => {
+
     const [weather, setWeather] = useState({})
     const [searchValue, SetSearchValue] = useState("london")
 
@@ -55,14 +59,19 @@ const Weather = () => {
                         <img className="mx-auto" src="https://openweathermap.org/img/wn/02d@2x.png" alt="" />
                         <h1 className="text-5xl text-white font-semibold">{location?.name}</h1>
                         <h2 className="mt-2 text-3xl text-white"> <span>{current?.temp_c}</span><sup>°C</sup></h2>
-                        {/* <h1 className="text-2xl text-white">Haze</h1> */}
+                        <h1 className="text-2xl text-white">{moment().format('dddd')} </h1>
                     </div>
 
 
 
-                    <div>
 
-                    </div>
+                        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 px-10 mx-auto'>
+                            {
+                                forecast?.forecastday.map(allUpcommingDay => <ForecastCard key={allUpcommingDay.date} allUpcommingDay={allUpcommingDay}></ForecastCard>
+                                )
+                            }
+                        </div>
+
 
 
 
