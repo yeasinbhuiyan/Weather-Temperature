@@ -10,7 +10,7 @@ const Weather = () => {
     const [searchValue, SetSearchValue] = useState("london")
 
     useEffect(() => {
-        fetch(`http://api.weatherapi.com/v1/forecast.json?key=56a94bcd21be43668e0110744231007 &q=${searchValue}&days=3&aqi=no&alerts=no`)
+        fetch(`http://api.weatherapi.com/v1/forecast.json?key=56a94bcd21be43668e0110744231007 &q=${searchValue}&days=7&aqi=no&alerts=no`)
             .then(res => res.json())
             .then(data => setWeather(data))
 
@@ -65,7 +65,7 @@ const Weather = () => {
 
 
 
-                        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 px-10 mx-auto'>
+                        <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7 gap-6 px-10 mx-auto'>
                             {
                                 forecast?.forecastday.map(allUpcommingDay => <ForecastCard key={allUpcommingDay.date} allUpcommingDay={allUpcommingDay}></ForecastCard>
                                 )
